@@ -1,0 +1,119 @@
+.location {
+  position: relative;
+  height: 740px;
+  background-image: url('../img/astana.jpg');
+  background-repeat: no-repeat;
+  // background-size: cover;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(42, 42, 42, 0.87);
+  }
+
+  @media (max-width: $breakpoint580) {
+    height: 480px;
+  }
+
+  .container {
+    height: 100%;
+  }
+
+  // .location__inner
+
+  &__inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    z-index: 2;
+    text-align: center;
+  }
+
+  // .location__title
+
+  &__title {
+    font-family: var(--primary-font);
+    text-transform: none;
+    font-weight: 700;
+    color: var(--white-color);
+  }
+
+  // .location__address
+
+  &__address {
+    margin-bottom: 20px;
+    font-family: var(--primary-font);
+    text-transform: none;
+    font-style: normal;
+    font-weight: 400;
+    color: var(--white-color);
+
+    @media (max-width: $breakpoint580) {
+      font-size: 20px;
+    }
+  }
+
+  // .location__data
+
+  &__data {
+    font-family: var(--primary-font);
+    text-transform: none;
+    font-style: normal;
+    font-weight: 400;
+    color: var(--white-color);
+
+    @media (max-width: $breakpoint580) {
+      font-size: 20px;
+    }
+  }
+
+  // .location__links
+
+  &__links {
+    display: grid;
+    grid-template-columns: repeat(2, 245px);
+    column-gap: 40px;
+    margin-top: 115px;
+
+    @media (max-width: $breakpoint580) {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 32px;
+      width: 100%;
+      margin-top: 60px;
+    }
+  }
+
+  // .location__link
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 100%;
+    border-radius: 30px;
+    background-color: var(--white-color);
+
+    font-size: 24px;
+    font-weight: 700;
+    line-height: normal;
+    color: var(--black-color);
+
+    &:nth-child(2) {
+      background-color: var(--primary-color);
+      color: var(--white-color);
+    }
+
+    @media (max-width: $breakpoint580) {
+      width: 100%;
+      height: 40px;
+    }
+  }
+}

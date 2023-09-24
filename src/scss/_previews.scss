@@ -1,0 +1,130 @@
+.previews {
+  padding: 80px 0;
+  background-color: var(--ligth-color);
+
+
+  @media (max-width: $breakpoint992) {
+    padding: 50px 0 20px;
+  }
+
+  // .previews__inner
+
+  &__inner {}
+
+  // .previews__title
+
+  &__title {
+    margin-bottom: 44px;
+    text-align: center;
+    color: var(--dark-color);
+  }
+
+  &__slider-container {
+    position: relative;
+  }
+
+  // .previews__slider
+
+  &__slider {
+    margin: 0 175px;
+
+
+    @media (max-width: $breakpoint992) {
+      margin: 0;
+    }
+  }
+
+  // .previews__slider-wrapper
+
+  &__slider-wrapper {
+    margin-bottom: 50px;
+
+
+    @media (max-width: $breakpoint992) {
+      margin-bottom: 28px;
+    }
+  }
+
+  // .previews__slide
+
+  &__slide {
+    width: fit-content !important;
+    max-height: 545px;
+
+    img {
+      max-width: 100%;
+      max-height: 545px;
+    }
+
+
+    @media (max-width: $breakpoint992) {
+      max-height: 370px;
+
+      img {
+        max-height: 370px;
+      }
+    }
+
+    @media (max-width: $breakpoint580) {
+      max-height: 280px;
+
+      img {
+        max-height: 280px;
+      }
+    }
+  }
+
+  // .previews__slider-arrow
+
+  &__slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+
+    &:hover {
+      filter: contrast(1.2);
+    }
+
+
+    @media (max-width: $breakpoint992) {
+      display: none;
+    }
+  }
+
+  // .previews__slider-arrow--prev
+
+  &__slider-arrow--prev {
+    left: 0;
+  }
+
+  // .previews__slider-arrow--next
+
+  &__slider-arrow--next {
+    right: 0;
+  }
+
+  // .previews__slider-pagination
+
+  &__slider-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 3px;
+
+    .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+      margin: 0 !important;
+      background-color: #D9D9D9;
+
+      opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: var(--primary-color);
+    }
+  }
+}

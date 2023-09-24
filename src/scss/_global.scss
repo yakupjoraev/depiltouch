@@ -1,0 +1,100 @@
+// Container
+.container {
+  max-width: ($containerWidth + $containerPadding) + px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 $containerSidePadding + px;
+
+  @media (max-width: $breakpoint1450) {
+    max-width: 1200px;
+  }
+
+  @media (max-width: $breakpoint992) {
+    max-width: 970px;
+  }
+
+  @media (max-width: $breakpoint768) {
+    max-width: 740px;
+  }
+
+  @media (max-width: $breakpoint580) {
+    max-width: none;
+  }
+}
+
+// Body Locked
+body {
+  background-color: var(--white-color);
+  font-family: var(--primary-font);
+  font-weight: 400;
+  line-height: normal;
+  color: var(--dark-color);
+
+  &.locked {
+    overflow: hidden;
+  }
+}
+
+.main-title {
+  text-transform: uppercase;
+  font-family: var(--third-font);
+  font-size: 36px;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--dark-color);
+
+  span {
+    display: block;
+    color: var(--primary-color);
+  }
+
+  @media (max-width: $breakpoint580) {
+    font-size: 32px;
+  }
+
+}
+
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  border-radius: 53.5px;
+  background-color: var(--primary-color);
+  font-family: var(--primary-font);
+  color: #FFF;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+
+  transition: background-color 0.2s linear, color 0.2s linear;
+
+  &:hover {
+    background-color: rgba(129, 216, 208, 0.60);
+    // color: var(--dark-color);
+  }
+
+  @media (max-width: $breakpoint992) {
+    font-size: 22px;
+  }
+
+  @media (max-width: $breakpoint768) {
+    font-size: 20px;
+  }
+
+}
+
+// Animations
+// Fade
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

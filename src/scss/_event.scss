@@ -1,0 +1,123 @@
+.event {
+  padding: 80px 0;
+  background-color: var(--ligth-color);
+
+  // .event__inner
+
+  &__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    @media (max-width: $breakpoint992) {
+      max-width: 100%;
+    }
+
+  }
+
+  // .event__title
+
+  &__title {
+    margin-bottom: 45px;
+    text-align: center;
+
+    @media (max-width: $breakpoint992) {
+      margin-bottom: 64px;
+    }
+
+    @media (max-width: $breakpoint580) {
+      margin-bottom: 32px;
+    }
+  }
+
+  // .event__list
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 14px;
+  }
+
+  // .event__item
+
+  &__item {
+    display: grid;
+    grid-template-columns: 84px 1fr;
+    column-gap: 12px;
+    min-height: 74px;
+
+    &:nth-child(odd) {
+
+      .event__action {
+        background-color: rgba(129, 216, 208, 0.15);
+      }
+    }
+
+    &:nth-child(even) {
+
+      .event__action {
+        background-color: rgba(129, 216, 208, 0.40);
+      }
+    }
+
+    @media (max-width: $breakpoint580) {
+      grid-template-columns: 68px 1fr;
+    }
+  }
+
+  // .event__time
+
+  &__time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    background-color: var(--primary-color);
+
+    font-size: 24px;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--black-color);
+
+    @media (max-width: $breakpoint580) {
+      font-size: 20px;
+    }
+  }
+
+  // .event__action
+
+  &__action {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px 20px 20px 40px;
+    border-radius: 7px;
+
+    @media (max-width: $breakpoint992) {
+      padding: 16px 18px;
+    }
+
+  }
+
+  // .event__action-label
+
+  &__action-label {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: normal;
+
+    @media (max-width: $breakpoint580) {
+      margin-bottom: 4px;
+      font-size: 14px;
+    }
+  }
+
+  // .event__action-descr
+
+  &__action-descr {
+    font-weight: 400;
+
+    @media (max-width: $breakpoint580) {
+      font-size: 14px;
+    }
+  }
+}

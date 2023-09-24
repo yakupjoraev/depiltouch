@@ -1,0 +1,134 @@
+.gallery {
+  padding: 124px 0;
+  background-color: var(--white-color);
+
+  @media (max-width: $breakpoint992) {
+    padding: 60px 0;
+  }
+
+  // .gallery__inner
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    row-gap: 10px;
+    column-gap: 10px;
+
+
+    @media (max-width: $breakpoint992) {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 4px;
+    }
+  }
+
+  // &__pic-group {
+  //   display: flex;
+  //   flex-direction: column;
+  //   row-gap: 10px;
+
+  //   &:nth-child(1) {
+  //     flex: 0 1 407px;
+  //   }
+
+  //   &:nth-child(2) {
+  //     flex: 0 1 256px;
+  //   }
+
+  //   &:nth-child(3) {
+  //     flex: 0 1 595px;
+  //   }
+  // }
+
+  // .gallery__pic
+
+  &__pic {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+
+
+    @media (max-width: $breakpoint992) {
+      object-position: center;
+    }
+
+    &:nth-child(1) {
+      grid-column: span 2;
+      height: 215px;
+
+
+      @media (max-width: $breakpoint992) {
+        order: 1;
+        height: 320px;
+      }
+
+      @media (max-width: $breakpoint768) {
+        height: 220px;
+      }
+    }
+
+    &:nth-child(2) {
+      grid-column: span 1;
+      height: 215px;
+
+
+      @media (max-width: $breakpoint992) {
+        order: 2;
+        height: 310px;
+      }
+
+      @media (max-width: $breakpoint768) {
+        height: 210px;
+      }
+    }
+
+    &:nth-child(3) {
+      grid-column: span 2;
+      grid-row: span 2;
+      height: 440px;
+
+
+      @media (max-width: $breakpoint992) {
+        order: 2;
+        grid-column: span 1;
+        grid-row: span 1;
+        height: 310px;
+      }
+
+      @media (max-width: $breakpoint768) {
+        height: 210px;
+      }
+    }
+
+    &:nth-child(4) {
+      grid-column: span 2;
+      height: 215px;
+
+
+      @media (max-width: $breakpoint992) {
+        order: 5;
+        height: 270px;
+      }
+
+      @media (max-width: $breakpoint768) {
+        height: 170px;
+      }
+    }
+
+    &:nth-child(5) {
+      grid-column: span 1;
+      height: 215px;
+
+
+      @media (max-width: $breakpoint992) {
+        order: 4;
+        height: 350px;
+        grid-column: span 2;
+      }
+
+      @media (max-width: $breakpoint768) {
+        height: 250px;
+      }
+    }
+  }
+}
