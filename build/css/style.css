@@ -280,7 +280,7 @@ body.locked {
 .hero__title {
   font-family: var(--third-font);
   font-size: 128px;
-  font-weight: 400;
+  font-weight: 600;
   line-height: normal;
   text-transform: uppercase;
   color: var(--primary-color);
@@ -926,7 +926,7 @@ body.locked {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  row-gap: 16px;
+  row-gap: 20px;
 }
 
 .form__info-item {
@@ -1248,7 +1248,7 @@ body.locked {
   }
 
   .form__info-list {
-    row-gap: 12px;
+    row-gap: 20px;
   }
 
   .form__info-item {
