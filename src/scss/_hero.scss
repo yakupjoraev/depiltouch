@@ -46,7 +46,7 @@
     font-family: var(--third-font);
     font-size: 128px;
     font-weight: 600;
-    line-height: normal;
+    line-height: 100%;
     text-transform: uppercase;
     color: var(--primary-color);
 
@@ -70,7 +70,7 @@
     font-family: var(--third-font);
     font-size: 128px;
     font-weight: 400;
-    line-height: normal;
+    line-height: 100%;
     text-transform: uppercase;
 
     @media (max-width: $breakpoint1450) {
